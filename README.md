@@ -24,3 +24,7 @@ rodar:
 
     a parte do cmd sera necessaria somente na segunda imagem (pois ela vai executar o binario gerado na imagem base "build)
         CMD [ "/main" ]
+
+# usando o target
+    para poder escolher qual imagem vc quer como resultado final (no caso de um dockefile com mult-stage), basta adicionar o parametro --target=<nome> no comando de build, ex:
+            ocker build -t lufertony/app-multstage:mult -f Dockerfile.multstage  --target=build . 
