@@ -27,4 +27,11 @@ rodar:
 
 # usando o target
     para poder escolher qual imagem vc quer como resultado final (no caso de um dockefile com mult-stage), basta adicionar o parametro --target=<nome> no comando de build, ex:
-            ocker build -t lufertony/app-multstage:mult -f Dockerfile.multstage  --target=build . 
+            docker build -t lufertony/app-multstage:mult -f Dockerfile.multstage  --target=build . 
+
+# usando o copy de uma imagem exerta
+    mesma coisa so tem que passar o caminho completo (url da imagem) no paramentro --from
+
+## entrar no container
+    docker exec -it e6513d40ece4 /bin/sh
+    docker exec -it <id container> <terminal>
